@@ -4,6 +4,14 @@ export interface CustomJwtPayload extends JwtPayload{
 
     USUARIO:string;
     ROL:string;
-    ID:Number;
+    ID:number;
 
+}
+
+export interface UsuarioDataYState
+{
+    logueado?:boolean;
+    id?:number;
+    rol?:string;
+    
 }

@@ -1,23 +1,47 @@
-/* ================================================= */
-/* FIRST MOBILE */
+FIRST MOBILE */
+
 /* ================================================= */
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    gap: 1rem;
+    position: relative;
 }
 
-img {
-    height: 150px;
-    width: auto;
+button.carousel-control-prev {
+    top: 35%;
+    left: 8%;
+    height: 30%;
+    transform: translate(-50%);
 }
 
-.numero-error {
-    color: var(--amarillo-logo);
-    font-size: 2rem;
-    font-weight: bold;
+button.carousel-control-next {
+    top: 35%;
+    right: 8%;
+    height: 30%;
+    transform: translate(50%);
+}
+
+.gadget {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.contenedor-no-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.gadget-logo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 11;
+}
+
+.oportunidad {
+    position: absolute;
+    top: 6px;
+    right: 110px;
+    z-index: 12;
 }
 
 /* ================================================= */

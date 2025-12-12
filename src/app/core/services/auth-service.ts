@@ -89,6 +89,27 @@ export class AuthService {
 
   }
 
+  getIdUsuarioFromToken():number{
+
+    let decoded: CustomJwtPayload;
+
+    this.token = this.getTokenFromLocalStorage();
+
+    if (this.token) {
+      try {
+
+        decoded = jwtDecode(this.token);
+        return decoded.ID;
+
+      } catch (error) {
+        return 0;
+      }
+    }
+
+    return 0;
+
+  }
+
   getUsuarioFromToken(): string {
 
     let decoded: CustomJwtPayload;

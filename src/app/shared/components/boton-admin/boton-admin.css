@@ -1,23 +1,19 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
-.contenedor {
+.admin {
+    background-color: black;
+    opacity: 60%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 2rem;
-    gap: 1rem;
-}
-
-img {
-    height: 150px;
-    width: auto;
-}
-
-.numero-error {
-    color: var(--amarillo-logo);
-    font-size: 2rem;
-    font-weight: bold;
+    /* border:var(--amarillo-logo) solid 3px; */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
 }
 
 /* ================================================= */

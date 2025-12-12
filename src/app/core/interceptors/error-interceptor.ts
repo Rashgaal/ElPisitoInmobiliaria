@@ -1,29 +1,39 @@
 import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
-import { inject, Inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { catchError } from 'rxjs';
-import { ErrorRespuesta } from '../models/dtos';
-import { ErrorStorageService } from '../services/error-storage-service';
+import { catchError, throwError } from 'rxjs';
+import { ErrorStoreService } from '../services/error-store-service';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
-  let _errorStorageService = inject(ErrorStorageService);
+  let _errorStoreService = inject(ErrorStoreService);
 
-  let _router = Inject(Router);
+  let _router = inject(Router);
 
   return next(req).pipe(
 
-    catchError((err:HttpErrorResponse) => {
+    catchError((err: HttpErrorResponse) => {
 
-      _errorStorageService.setError({
 
-        status: err.status,
-        message:err.message
-          
-      })
+      _errorStoreService.setErrorStatus(err.error.status);
+      _errorStoreService.setErrorMessage(err.error.message);
 
-    }));
 
-    _router.navigate(['error'])
+      //console.log(err.error.status);
+      //console.log(err.error.message);
 
-};
+      _router.navigate(['/error']);
+
+      return throwError(() => err);
+
+
+
+    })
+
+
+
+
+  );//end pipe
+
+
+}; //end interceptor
