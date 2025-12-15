@@ -4,4 +4,8 @@
     <span class="numero-error">{{status}}</span>
     <span class="mensaje-error">{{message}}</span>
 
+    @if(status === 401){
+        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+    }
+
 </section>

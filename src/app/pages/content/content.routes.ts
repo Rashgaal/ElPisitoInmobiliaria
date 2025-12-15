@@ -6,6 +6,7 @@ import { SobreElPisito } from "./sobre-el-pisito/sobre-el-pisito";
 import { Contactar } from "./contactar/contactar";
 import { MapaWeb } from "./mapa-web/mapa-web";
 import { RegistroUsuario } from "./registro-usuario/registro-usuario";
+import { DetailFinder } from "./detail-finder/detail-finder";
 
 export const CONTENT_ROUTES = [
 
@@ -52,5 +53,10 @@ export const CONTENT_ROUTES = [
     {
         path: 'registro-usuario',
         component: RegistroUsuario
+    }
+    ,
+    {
+        path: 'detail-finder/:idTipo/:idPoblacion/:idOperacion',
+        component: DetailFinder
     }    
 ];

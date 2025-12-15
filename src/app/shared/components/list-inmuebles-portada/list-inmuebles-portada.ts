@@ -61,6 +61,7 @@ export class ListInmueblesPortada implements OnInit {
     this._inmuebleService.getInmueblesPortada().subscribe({
 
       next: (datos) => { 
+        console.log(datos);
         this.inmuebles = datos;
       }
       ,

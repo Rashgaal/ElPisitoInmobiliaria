@@ -59,7 +59,7 @@ export interface Poblacion{
 
     id?:number;
     nombre:string;
-    provincia:string;
+    provincia:Provincia;
     activo?:number
 
 }
