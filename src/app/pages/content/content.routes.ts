@@ -7,6 +7,9 @@ import { Contactar } from "./contactar/contactar";
 import { MapaWeb } from "./mapa-web/mapa-web";
 import { RegistroUsuario } from "./registro-usuario/registro-usuario";
 import { DetailFinder } from "./detail-finder/detail-finder";
+import { DetailInmueble } from "./detail-inmueble/detail-inmueble";
+import { DetailInmobiliaria } from "./detail-inmobiliaria/detail-inmobiliaria";
+import { DetailFavoritos } from "./detail-favoritos/detail-favoritos";
 
 export const CONTENT_ROUTES = [
 
@@ -58,5 +61,20 @@ export const CONTENT_ROUTES = [
     {
         path: 'detail-finder/:idTipo/:idPoblacion/:idOperacion',
         component: DetailFinder
+    }
+    ,
+    {
+        path: 'detail-inmueble/:id',
+        component: DetailInmueble
+    }   
+    ,
+    {
+        path: 'detail-inmobiliaria/:id',
+        component: DetailInmobiliaria
+    }     
+    ,
+    {
+        path: 'detail-favoritos',
+        component: DetailFavoritos
     }    
 ];

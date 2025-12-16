@@ -37,6 +37,14 @@ export class ListInmueblesPortada implements OnInit {
     this.suscripcion = this._comunicacionService.estadoLogin.subscribe({
 
       next: (estado) => {
+
+        // Si no estas logueado el objeto seria -> 
+        /*{
+          logueado:false;
+          id:0;
+          rol:[NO_ROL];
+        }*/
+       
         this.datosUsuarioYEstado.id = this._authService.getIdUsuarioFromToken();
         this.datosUsuarioYEstado.rol = this._authService.getRolFromToken();
         this.datosUsuarioYEstado.logueado = estado;
@@ -61,7 +69,7 @@ export class ListInmueblesPortada implements OnInit {
     this._inmuebleService.getInmueblesPortada().subscribe({
 
       next: (datos) => { 
-        console.log(datos);
+        //console.log(datos);
         this.inmuebles = datos;
       }
       ,

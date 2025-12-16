@@ -144,7 +144,7 @@ export class AuthService {
       return decoded.ROL; // "[ROLE_USER]", "[ROLE_ADMIN]", "[ROLE_SUPER_ADMIN]"
       
     }
-    return "";
+    return "[NO_ROL]";
   }
 
 }

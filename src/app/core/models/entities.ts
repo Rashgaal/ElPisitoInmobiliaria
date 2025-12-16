@@ -22,7 +22,7 @@ export interface Inmueble{
     claim:string;
     descripcion:string;
     gadget:number;
-    garaje:string;
+    garajes:string;
     habitaciones:string;
     inmobiliaria:Inmobiliaria;
     imagenes:Array<ImagenInmueble>;
